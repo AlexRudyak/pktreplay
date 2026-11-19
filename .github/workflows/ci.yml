@@ -18,7 +18,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         go: ["1.22", "stable"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-go@v5
         with:
           go-version: ${{ matrix.go }}
@@ -42,7 +42,7 @@ jobs:
       matrix:
         target: [linux/amd64, linux/arm64, linux/386, windows/amd64, windows/arm64]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-go@v5
         with:
           go-version: stable
