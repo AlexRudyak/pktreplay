@@ -19,7 +19,7 @@ jobs:
         go: ["1.22", "stable"]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: ${{ matrix.go }}
       - name: Formatting
@@ -43,7 +43,7 @@ jobs:
         target: [linux/amd64, linux/arm64, linux/386, windows/amd64, windows/arm64]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: stable
       - name: Build ${{ matrix.target }}
